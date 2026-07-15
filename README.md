@@ -62,10 +62,15 @@ Password: Demo@2026!
 ###Landing page
 
 <img width="2504" height="1316" alt="Screenshot 2026-07-15 193907" src="https://github.com/user-attachments/assets/0ed0c777-d24a-4b55-9ad6-c9d8a172fd84" />
+
 <img width="2521" height="1342" alt="Screenshot 2026-07-15 194028" src="https://github.com/user-attachments/assets/83979197-47d5-455d-899c-0d37dac1af24" />
+
 <img width="2534" height="1349" alt="Screenshot 2026-07-15 194101" src="https://github.com/user-attachments/assets/a5c3aafe-714a-419f-834e-59079b58344d" />
+
 <img width="2532" height="1344" alt="Screenshot 2026-07-15 194147" src="https://github.com/user-attachments/assets/921d64a8-ad5d-4668-94e0-dbfbd0c4e356" />
+
 <img width="2523" height="1421" alt="Screenshot 2026-07-15 195508" src="https://github.com/user-attachments/assets/849567b7-064b-441d-b31b-3d97b7d766ba" />
+
 <img width="2528" height="1368" alt="Screenshot 2026-07-15 194214" src="https://github.com/user-attachments/assets/c53a8f3d-e667-47b5-b364-538a57f87799" />
 
 ## Login inteface
@@ -75,7 +80,9 @@ Password: Demo@2026!
 ## Manager account 
 
 <img width="2495" height="1359" alt="Screenshot 2026-07-15 194437" src="https://github.com/user-attachments/assets/88f6b73a-9b97-4d0a-b605-e178fbe729f2" />
+
 <img width="2511" height="1347" alt="Screenshot 2026-07-15 194511" src="https://github.com/user-attachments/assets/056c7cef-75a4-4c8c-94e1-260cd7b1ebb5" />
+
 <img width="2492" height="1445" alt="Screenshot 2026-07-15 194531" src="https://github.com/user-attachments/assets/789f2e21-8153-418c-97c0-5a8ef88e4474" />
 
 ## Billing
