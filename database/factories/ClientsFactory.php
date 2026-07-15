@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\agencies;
+use App\Models\clients;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -10,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ClientsFactory extends Factory
 {
+    protected $model = clients::class;
     /**
      * Define the model's default state.
      *
@@ -17,6 +19,7 @@ class ClientsFactory extends Factory
      */
     public function definition(): array
     {
+        
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
