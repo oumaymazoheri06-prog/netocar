@@ -646,9 +646,9 @@
                         <div class="overflow-hidden rounded-[2rem] shadow-[0_35px_90px_rgba(15,23,42,.2)]">
                             <img src="{{ asset('images/blueliquid.jpg') }}" alt="Centre de lavage professionnel" class="h-[34rem] w-full object-cover object-center" loading="lazy">
                         </div>
-                        <div class="nc-float absolute -bottom-6 -left-5 max-w-xs rounded-2xl border border-teal-100 bg-white/95 p-6 text-slate-950 shadow-[0_28px_70px_rgba(15,23,42,.18)] backdrop-blur">
-                            <p class="text-xs font-extrabold uppercase tracking-[.18em] text-[#0f766e]">Votre prochain palier</p>
-                            <p class="nc-display mt-3 text-2xl font-bold leading-tight text-[#0f172a]">Plus de volume.<br><span class="text-[#14b8a6]">Pas plus de chaos.</span></p>
+                        <div class="nc-float absolute -bottom-6 -left-5 max-w-xs rounded-2xl border border-white/20 bg-[#071326]/90 p-6 text-white shadow-[0_28px_70px_rgba(15,23,42,.22)] backdrop-blur">
+                            <p class="text-xs font-extrabold uppercase tracking-[.18em] text-white">Votre prochain palier</p>
+                            <p class="nc-display mt-3 text-2xl font-bold leading-tight text-white">Plus de volume.<br><span class="text-white">Pas plus de chaos.</span></p>
                         </div>
                     </div>
                 </div>
