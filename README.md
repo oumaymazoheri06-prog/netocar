@@ -1,113 +1,101 @@
 # NetoCar
 
-NetoCar is a Laravel SaaS demo for managing car wash agencies.
+NetoCar is a Laravel SaaS application created to help car wash agencies manage their daily operations from one place.
 
-It centralizes reservations, clients, employees, services, tickets, payments, reports and branch operations in one dashboard.
+It brings together reservations, customers, employees, services, tickets, payments, reports, and branch activity in a single dashboard.
 
-## Features
+## Main Features
 
-- Agency dashboard with business statistics
+- Dashboard with agency statistics
 - Reservation management
-- Ticket workflow tracking
-- Data import
-- Client, employee, branch and service management
-- Payments and report exports
-- Role-based access for manager and staff
-- Demo mode for portfolio visitors
-- Modern landing page and authentication UI
+- Ticket and service status tracking
+- Customer, employee, branch, and service management
+- CSV data import with validation
+- Payment tracking and report exports
+- Role-based access for managers and staff
+- Public demo mode with fictitious data
+- Responsive landing page and authentication interface
 
 ## Tech Stack
 
-- Laravel
-- Laravel Fortify
-- Livewire / Flux
-- Tailwind CSS
-- JavaScript
-- MySQL
-- Vite
+**Backend:** Laravel, PHP, Laravel Fortify, MySQL  
+**Frontend:** Livewire, Flux, Tailwind CSS, JavaScript  
+**Tools:** Vite, Composer, npm, Git, GitHub
 
-## Demo Accounts
+## What I Worked On
 
-The demo environment includes public test accounts with fictitious data.
+I worked on both the backend and frontend of the application.
 
-Manager account:
+I built the dashboard, reservation and ticket workflows, customer and employee management, branch and service management, payments, reports, role-based access, CSV import, and the public demo mode.
 
-```txt
-demo.manager@netocar.test
-```
+I also designed the landing page and authentication interface.
 
-Staff account:
+## Main Challenges
 
-```txt
-demo.staff@netocar.test
-```
+### Role-based access
 
-Password:
-
-```txt
-Demo@2026!
-```
-
-Demo accounts use fictitious data and are protected in read-only mode, so visitors can explore the product without damaging the demo dataset.
-
-## Challenges & Solutions
-
-### Multi-role SaaS access
-
-The application needed to support different user responsibilities inside the same agency: manager, staff and admin-like access.
-
-Solution: role-based access was implemented around Laravel middleware and dedicated dashboard experiences, so each user only sees the actions and data that match their role.
+Managers and staff do not have the same responsibilities, so I created separate permissions and interfaces for each role using Laravel middleware.
 
 ### Agency data isolation
 
-Because the project simulates a SaaS product, agency data must stay separated. A user from one agency should not access reservations, tickets, clients or employees from another agency.
+Each agency must only access its own customers, reservations, tickets, and employees. I used scoped queries and tenant middleware to keep agency data separated.
 
-Solution: tenant isolation middleware and scoped queries were added to keep operational data attached to the authenticated user's agency.
+### Public demo protection
 
-### Public portfolio demo
+Visitors should be able to explore the application without deleting or changing the demo data. I added public demo accounts with fictitious data and read-only protection.
 
-For a public portfolio, giving real manager credentials would be risky and messy because visitors could modify or delete demo data.
+### CSV import
 
-Solution: a demo mode was added with public demo accounts, seeded fictitious data and a read-only protection layer that blocks modification requests for demo users.
+Imported data can contain missing or invalid rows. I added validation, preview, and error feedback before saving the records.
 
-### Authentication and expired pages
+## Demo Accounts
 
-During login testing, the app sometimes showed a "Page Expired" screen because old CSRF tokens could be reused from cached auth pages.
+The demo accounts use fictitious data and are protected in read-only mode.
 
-Solution: authentication views were adjusted to use fresh server-rendered forms, CSRF metadata was added globally, and no-cache headers were applied to Fortify auth pages.
 
-### Import validation
+Manager: demo.manager@netocar.test
+Staff: demo.staff@netocar.test
+Password: Demo@2026!
 
-CSV imports needed to be useful without silently creating bad records.
+### screenshots 
 
-Solution: imports were designed with validation, preview behavior and invalid-row feedback so valid rows can be confirmed while problematic rows are ignored or corrected.
+###Landing page
 
-### Landing page clarity
+<img width="2504" height="1316" alt="Screenshot 2026-07-15 193907" src="https://github.com/user-attachments/assets/0ed0c777-d24a-4b55-9ad6-c9d8a172fd84" />
+<img width="2521" height="1342" alt="Screenshot 2026-07-15 194028" src="https://github.com/user-attachments/assets/83979197-47d5-455d-899c-0d37dac1af24" />
+<img width="2534" height="1349" alt="Screenshot 2026-07-15 194101" src="https://github.com/user-attachments/assets/a5c3aafe-714a-419f-834e-59079b58344d" />
+<img width="2532" height="1344" alt="Screenshot 2026-07-15 194147" src="https://github.com/user-attachments/assets/921d64a8-ad5d-4668-94e0-dbfbd0c4e356" />
+<img width="2523" height="1421" alt="Screenshot 2026-07-15 195508" src="https://github.com/user-attachments/assets/849567b7-064b-441d-b31b-3d97b7d766ba" />
+<img width="2528" height="1368" alt="Screenshot 2026-07-15 194214" src="https://github.com/user-attachments/assets/c53a8f3d-e667-47b5-b364-538a57f87799" />
 
-The landing page had to explain a complex operational product without feeling childish or overloaded.
+## Login inteface
 
-Solution: the page was redesigned with a premium SaaS style, clearer contrast, before/after storytelling, animated but lightweight interactions and stronger calls to action.
+<img width="2542" height="1368" alt="Screenshot 2026-07-15 194308" src="https://github.com/user-attachments/assets/0a79f30a-68ce-4950-a9b6-b7b98048ba49" />
 
-## Local Installation
+## Manager account 
 
-```bash
-composer install
-npm install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate --seed
-npm run build
-php artisan serve
-```
+<img width="2495" height="1359" alt="Screenshot 2026-07-15 194437" src="https://github.com/user-attachments/assets/88f6b73a-9b97-4d0a-b605-e178fbe729f2" />
+<img width="2511" height="1347" alt="Screenshot 2026-07-15 194511" src="https://github.com/user-attachments/assets/056c7cef-75a4-4c8c-94e1-260cd7b1ebb5" />
+<img width="2492" height="1445" alt="Screenshot 2026-07-15 194531" src="https://github.com/user-attachments/assets/789f2e21-8153-418c-97c0-5a8ef88e4474" />
 
-## Demo Data
+## Billing
+<img width="2028" height="1433" alt="Screenshot 2026-07-15 194737" src="https://github.com/user-attachments/assets/8a5a6944-95c8-4a24-96a7-5578e78770ee" />
 
-To seed demo data:
+## Import center 
+<img width="2051" height="1242" alt="Screenshot 2026-07-15 194759" src="https://github.com/user-attachments/assets/688822e8-d124-4b32-9313-55316730fda1" />
 
-```bash
-php artisan db:seed --class=DemoSeeder
-```
+## Stats
+<img width="2054" height="1258" alt="Screenshot 2026-07-15 194834" src="https://github.com/user-attachments/assets/699bb247-3bf7-4966-be10-9355d33ed4d8" />
 
-## Author
+## Employee account  
+<img width="2544" height="1431" alt="Screenshot 2026-07-15 195011" src="https://github.com/user-attachments/assets/b6392c7e-465a-402f-ab27-0a977f287aa3" />
 
-Built by Oumayma Zoheri as a  SaaS project.
+<img width="2003" height="1387" alt="Screenshot 2026-07-15 195209" src="https://github.com/user-attachments/assets/d531abc4-ac00-43a9-96d3-1b6e1f9ad53e" />
+
+<img width="2089" height="1331" alt="Screenshot 2026-07-15 195227" src="https://github.com/user-attachments/assets/6f98e114-1467-4d4c-9368-40750e931d20" />
+
+
+
+
+
+
